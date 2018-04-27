@@ -1,0 +1,15 @@
+---
+title: "Untitled"
+author: "Your Name"
+output:
+  bookdown::html_document:
+    toc: true
+    fig_caption: true
+    template: flatly
+---
+
+## Introduction
+
+## Analysis
+
+## Conclusions
