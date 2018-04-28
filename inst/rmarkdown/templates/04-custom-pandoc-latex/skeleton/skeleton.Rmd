@@ -1,0 +1,40 @@
+---
+title: "Untitled"
+first-name: FirstName
+last-name: LastName
+module: ModuleNumber
+teammates: [student1, student2]
+module-lead: Prof. Smith
+lab-date: XX/XX/XX
+due-date: XX/XX/XX
+TA: John Smith
+output: 
+  pdf_document:
+    template: template.tex 
+bibliography: bibliography.bib
+papersize: a4paper
+fontsize: 11pt
+documentclass: article
+geometry: margin=2cm
+---
+
+```{r, include = FALSE}
+# Add code in here to load functions
+```
+
+
+
+# Problem Statement
+
+# Investigation/Research
+
+# Conclusions
+
+A report written in R Markdown [@R-rmarkdown]
+
+# References
+
+
+
+
+
