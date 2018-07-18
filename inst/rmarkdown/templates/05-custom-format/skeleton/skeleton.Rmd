@@ -1,19 +1,43 @@
 ---
-title: "Untitled"
-author: "Your Name"
+title: "Custom R Markdown Documents"
+author: ""
+date: ""
 output:
   MyTemplates::my_html_format:
     toc: true
 ---
 
-![](logo.png)
+# About
 
-## Introduction
+You will notice in the YAML above that a custom output format has been specified: `MyTemplates::my_html_format`. This makes it easy to customize output formats to use specific options or refer to external files. Readers should refer to [Chapter 18](https://bookdown.org/yihui/rmarkdown/new-formats.html) for a detailed description, but the key benefits of creating your own format is that:
 
-## Analysis
+- You can configure the options of R markdown to use your own settings. For example, you may always want to display a table of contents or have a favourite theme which you want all documents to use.
+- It allows you to refer to external template files without having to have them in the same directory as the R Markdown document. This makes the template much more flexible.
 
-```{r}
-knitr::kable(mtcars[1:5, 1:5])
+# External Files
+
+This template includes several custom files:
+
+- A custom HTML footer, which is stored in `inst/rmarkdown/resources/footer.html`.
+- A custom HTML header, which is stored in `inst/rmarkdown/resources/header.html`. This adds a logo to the header of the document.
+- A custom styles file `inst/rmarkdown/resources/styles.css`, which alters the appearance of tables.
+
+# Analysis
+
+The custom CSS file has been used to change the style of the document. Here is an example table:
+
+```{r table}
+knitr::kable(mtcars[1:5, 1:5], caption = "An example table")
 ```
 
-## Conclusions
+# Customisation
+
+As some ideas for using this template, you may wish to customise your own document:
+
+- Change the default options used in the `my_html_format` function. For example, it will use the theme "lumen", but this could be changed to "yeti", "sandstone" etc.
+- Update the footer file to include your own name and email address, and edit the urls for the social media icons so that they they link to your account.
+- Add your own logo by altering the `header.html` file. You will notice that the URL is referenced as a URL: this is recommended as it makes your package more portable.
+
+
+
+

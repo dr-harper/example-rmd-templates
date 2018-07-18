@@ -18,19 +18,32 @@ documentclass: article
 geometry: margin=2cm
 ---
 
-```{r, include = FALSE}
-# Add code in here to load functions
+# About
+
+This template is similar to the `03: My Template (HTML edit)`, but instead applies a custom LaTeX template. This is used to build the final output.
+
+## Alteration to the template
+
+You will notice that there are many additional YAML options than usual. At line 153, the template has been altered to include a lot of extra fields, which are enclosed by the dollar signs:
+
+```
+\title{
+\noindent
+\large\textbf{$title$} \hfill \textbf{$first-name$ $last-name$} \\
+\normalsize Module: $module$ \hfill Team members: $for(teammates)$$teammates$$sep$, $endfor$ \\
+Module Lead: $module-lead$ \hfill Lab Date: $lab-date$ \\
+Lab Lead: $TA$ \hfill Due Date: $due-date$
+}
+\date{\vspace{-5ex}}
 ```
 
+# Example feature.
 
+This template also includes a bibliography file, containing a single reference for R Markdown [@R-rmarkdown]. The bibliography will be added to the end of the output document.
 
-# Problem Statement
+## Customisation
 
-# Investigation/Research
-
-# Conclusions
-
-A report written in R Markdown [@R-rmarkdown]
+If you want to create your own LaTeX template, you will have to be at least partly familiar with LaTeX. But this example highlights how the title section can be customised to include additional fields beyond the typical `title`, `date` and `authors` etc.
 
 # References
 

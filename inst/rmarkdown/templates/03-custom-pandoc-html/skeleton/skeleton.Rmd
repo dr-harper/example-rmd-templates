@@ -1,0 +1,29 @@
+---
+title: "Untitled"
+author: "Your Name"
+website: "https://www.rstudio.com/"
+output:
+  html_document:
+    toc: true
+    fig_caption: true
+    template: template.html
+---
+
+# About
+
+In this example, we highlight how a custom pandoc template can be used to add additional features to the styling of the HTML output. This report includes a customised footer, which will display the author name and a website URL as defined by the YAML parameter `website`.
+
+## Altered pandoc template
+
+If you look in the template folder, you will notice there is an additional file `template.html`. This is a pandoc template, which controls how the options of the YAML are converted into the final output document. If you look at line 459 of this file, you will see the following code, which has been added to the file:
+
+```html
+&nbsp;
+<hr />
+<p style="text-align: center;">A work by $author$ </a></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>$website$</em></span></p>
+```
+
+This controls the appearance of the footer in the document. You will notice that the code includes text within dollar symbols (`$author$` and `$website$`).
+
+A full explanation of this is beyond this template, but you may wish to check [here](http://pandoc.org/MANUAL.html#using-variables-in-templates) on how pandoc variables can be controlled. Anything added to the template will be controllable by the YAML frontmatter.

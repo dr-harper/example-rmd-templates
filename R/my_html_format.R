@@ -15,12 +15,21 @@ my_html_format = function(toc = TRUE, ...) {
 
   css    = pkg_resource("rmarkdown/resources/styles.css")
   footer = pkg_resource("rmarkdown/resources/footer.html")
+  header = pkg_resource("rmarkdown/resources/header.html")
 
   # call the base html_document function
   rmarkdown::html_document(
-    toc = toc, fig_width = 6.5, fig_height = 4,
-    theme = "flatly", css = css,
-    includes = rmarkdown::includes(after_body = footer),
+    toc = toc,
+    toc_float = TRUE,
+    fig_width = 6.5,
+    fig_height = 4,
+    theme = "lumen",
+    code_folding = "show",
+    css = css,
+    number_sections = TRUE,
+    pandoc_args = rmarkdown::pandoc_variable_arg(name = "title", value = "Test"),
+    includes = rmarkdown::includes(before_body = header,
+                                   after_body = footer),
     ...
   )
 }

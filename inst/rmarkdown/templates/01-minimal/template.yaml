@@ -1,1 +1,2 @@
-name: My Template
+name: "01: My Template"
+description: A minimal example, whereby the default YAML settings are altered and the default text is removed.
