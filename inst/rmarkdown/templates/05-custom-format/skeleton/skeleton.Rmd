@@ -1,0 +1,19 @@
+---
+title: "Untitled"
+author: "Your Name"
+output:
+  MyTemplates::my_html_format:
+    toc: true
+---
+
+![](logo.png)
+
+## Introduction
+
+## Analysis
+
+```{r}
+knitr::kable(mtcars[1:5, 1:5])
+```
+
+## Conclusions
