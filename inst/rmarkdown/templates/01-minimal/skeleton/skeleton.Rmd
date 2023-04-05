@@ -1,6 +1,6 @@
 ---
-title: "Untitled"
-author: "Your Name"
+title: "Naam"
+author: "Marijke Muller"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
@@ -11,8 +11,4 @@ output:
 
 ## Introduction
 
-This is a very minimal example! The only thing which is changed in this template is a few of the default settings in the YAML. 
-
-## Customisation
-
-A simple template like this might be useful to include if you have a common structure of report that you want to run. For example, you change the author name your name. You can edit the sections to include a generic layout.
+DIT IS EEN TEST
